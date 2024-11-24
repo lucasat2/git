@@ -1,0 +1,85 @@
+HEAD
+
+É a branch onde estamos 
+_________________________________________
+
+BRANCHES
+
+Criar branch já com Head nela
+git checkout -b <nome da branch>
+_________________________________________
+
+SSH GIT 
+
+Pense na chave pública como um cadeado e na privada como uma chave do cadeado
+ninguém mais tem a chave privada que consegue abrir
+aquele cadeado (chave pública).
+_________________________________________
+
+COMANDO PARA GERAR 
+
+ssh-keygen -t ed25519 -C "seu_email@exemplo.com
+Mantenha a opção padrão, que irá salvar na pasta ~/.ssh (ou C:\Users\<nome de
+usuário>\.ssh no caso do Windows sem WSL).
+Essa é uma pasta padrão onde o computador sabe procurar por chaves.
+_________________________________________
+
+ACESSAR A PASTA E VER SE AS CHAVES ESTAO LA 
+
+cd C:\Users\lucas/.ssh/
+dir ou ls
+entrar na pasta manualmente pelo explorer
+clicar na chave publica e editar 
+pegar o conteudo que está la e copiar para colar no git hub web
+_________________________________________
+
+COLOCAR A CHAVE PUBLICA NO GITHUB WEB 
+
+configuracoes, chaves SSH
+colar o conteudo da chave publica na area.
+_________________________________________
+
+TESTAR SE ESTA FUNCIONANDO 
+
+ssh -T git@github.com
+_________________________________________
+
+APONTAR DIRETORIO LOCAL PARA REMOTO
+
+git remote add origin git@github.com:lucasat2/AlphaTeoria.git
+
+QUANDO MUDA O NOME DO REPOSITORIO 
+
+git remote set-url origin git@github.com:usuario/nome do repositorio.git
+
+___________________________________
+
+CRIAR GIT IGNORE 
+
+touch .gitignore
+
+___________________________________
+
+TROCAR DE MASTER PARA MAIN
+
+git branch -m master main
+git push --set-upstream origin main
+_________________________________________
+
+DELETAR UMA BRANCH LOCAL
+
+git branch -d nome da branch
+_________________________________________
+
+DELETAR UMA BRANCH REMOTA 
+
+git push -d nome da branch 
+_________________________________________
+
+LOG DE COMO ESTAO AS BRANCHES E COMMITS 
+
+git log --oneline --graph --decorate
+_________________________________________
+
+COMMIT EM UMA BRANCH VAZIA 
+https://github.com/lucasat2/Ex6
